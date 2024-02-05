@@ -1,0 +1,22 @@
+.landing-page-container {
+  height: 100vh;
+  background-color: white;
+}
+
+.side-nav {
+  width: 70%;
+}
+
+.topbar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0px 36px;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger-button {
+    display: none;
+  }
+}
