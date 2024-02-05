@@ -3,20 +3,23 @@
   <mat-drawer class="side-nav" #drawer [mode]="'over'">I'm a drawer</mat-drawer>
   <mat-drawer-content>
     <!-- TopBar -->
-    <mat-toolbar class="topbar-container shadow fixed">
-      <span>My App</span>
+    <mat-toolbar class="topbar-container shadow fixed z-30">
+      <span class="text-white">My App</span>
       <button
         mat-icon-button
         class="hamburger-button"
         aria-label="Example icon-button with menu icon"
         (click)="drawer.toggle()"
       >
-        <mat-icon>menu</mat-icon>
+        <mat-icon class="white-icon">menu</mat-icon>
       </button>
     </mat-toolbar>
     <!-- End of Topbar -->
 
     <!-- Content -->
+    <div>
+      <app-banner />
+    </div>
 
     <!-- End of Content -->
   </mat-drawer-content>
