@@ -1,0 +1,12 @@
+.topbar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0px 36px;
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger-icon {
+    display: none;
+  }
+}
