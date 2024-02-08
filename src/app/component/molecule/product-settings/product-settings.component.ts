@@ -21,7 +21,7 @@ import { FormsModule } from '@angular/forms';
 export class ProductSettingsComponent {
   productSettings$: Observable<productSettingsType>;
   totalProducts: string = '10';
-  dateProduct: string = 'oldest';
+  dateProduct: string = 'published_at';
 
   constructor(private store: Store<{ productSettings: productSettingsType }>) {
     this.productSettings$ = store.select('productSettings');

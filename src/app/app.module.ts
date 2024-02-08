@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { StoreModule } from '@ngrx/store';
 import { productSettingsReducers } from './state/reducers/product-settings.reducer';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { productSettingsReducers } from './state/reducers/product-settings.reduc
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({ productSettings: productSettingsReducers }),
+    HttpClientModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],

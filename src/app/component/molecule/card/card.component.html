@@ -1,1 +1,11 @@
-<p>card works!</p>
+<mat-card class="card-container">
+  <img
+    mat-card-image
+    [src]="medium_image[0].url"
+    [alt]="medium_image[0].file_name"
+  />
+  <mat-card-content>
+    <p class="italic">{{ dateConvert }}</p>
+    <p class="font-semibold text-xl">{{ title }}</p>
+  </mat-card-content>
+</mat-card>
