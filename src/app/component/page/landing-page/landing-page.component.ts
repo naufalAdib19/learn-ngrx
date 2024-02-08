@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDrawer, MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BannerComponent } from '../../organism/banner/banner.component';
+import { ProductSettingsComponent } from '../../molecule/product-settings/product-settings.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -19,6 +19,7 @@ import { BannerComponent } from '../../organism/banner/banner.component';
     MatToolbarModule,
     MatIconModule,
     BannerComponent,
+    ProductSettingsComponent,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
