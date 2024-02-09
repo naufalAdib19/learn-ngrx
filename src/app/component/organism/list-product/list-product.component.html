@@ -1,9 +1,26 @@
 <div class="flex flex-wrap gap-8 items-center justify-center px-24">
-  @for(product of products; track products) {
+  <!-- @for(product of products; track products) {
   <app-card
     [title]="product.title"
     [medium_image]="product.medium_image"
     [published_at]="product.published_at"
   />
-  }
+  } -->
+  <div
+    *ngFor="
+      let product of products
+        | paginate
+          : {
+              itemsPerPage: pageSize,
+              currentPage: currentPage,
+              totalItems: totalItems
+            }
+    "
+  >
+    <app-card
+      [title]="product.title"
+      [medium_image]="product.medium_image"
+      [published_at]="product.published_at"
+    />
+  </div>
 </div>

@@ -2,6 +2,7 @@ import { createReducer, on } from '@ngrx/store';
 import {
   orderByDateProduct,
   orderByTotalProduct,
+  setCurrentPages,
 } from '../actions/product-settings.actions';
 
 export type productSettingsType = {
@@ -11,7 +12,7 @@ export type productSettingsType = {
 };
 
 const productSettingsInitialState: productSettingsType = {
-  dateProducts: 'oldest',
+  dateProducts: 'published_at',
   totalProducts: '10',
   currentPage: 1,
 };
@@ -27,5 +28,9 @@ export const productSettingsReducers = createReducer(
     ...state,
     totalProducts: totalProducts,
     currentPage: 1,
+  })),
+  on(setCurrentPages, (state: productSettingsType, { currentPage }) => ({
+    ...state,
+    currentPage: currentPage,
   }))
 );

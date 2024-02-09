@@ -1,1 +1,19 @@
-<p>pagination works!</p>
+<div>
+  <div class="flex gap-x-3 text-xl items-center">
+    <button mat-raised-button color="primary"><<</button>
+    <button mat-raised-button color="primary"><</button>
+    <div class="flex items-center">
+      @for(number of page.slice(currentPage - 1, currentPage + 4); track page) {
+      <div
+        [class.bg-slate-300]="currentPage === number"
+        class="px-4 py-1 rounded cursor-pointer"
+        (click)="onNumberClick(number)"
+      >
+        {{ number }}
+      </div>
+      }
+    </div>
+    <button mat-raised-button color="primary">></button>
+    <button mat-raised-button color="primary">>></button>
+  </div>
+</div>

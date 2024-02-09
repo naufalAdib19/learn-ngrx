@@ -9,3 +9,7 @@ export const orderByDateProduct = createAction(
   '[ProductSettings Component] setDateProducts',
   props<{ dateProducts: string }>()
 );
+export const setCurrentPages = createAction(
+  '[ProductSettings Component setCurrentPages',
+  props<{ currentPage: number }>()
+);

@@ -1,8 +1,12 @@
 <mat-card class="card-container">
   <img
     mat-card-image
-    [src]="medium_image[0].url"
-    [alt]="medium_image[0].file_name"
+    [src]="
+      medium_image.length !== 0
+        ? medium_image[0].url
+        : 'https://eagle-sensors.com/wp-content/uploads/unavailable-image.jpg'
+    "
+    [alt]="medium_image.length !== 0 ? medium_image[0].file_name : ''"
   />
   <mat-card-content>
     <p class="italic">{{ dateConvert }}</p>
